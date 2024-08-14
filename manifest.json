@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Posture Corrector Extension",
+    "version": "1.0",
+    "description": "Detects bad posture and controls browser interactions.",
+    "permissions": ["activeTab", "tabs", "scripting", "storage", "notifications", "background"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "icons": {
+      "16": "icons/3_icon16.png",
+      "48": "icons/3_icon48.png",
+      "128": "icons/3_icon128.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/3_icon16.png",
+        "48": "icons/3_icon48.png",
+        "128": "icons/3_icon128.png"
+      }
+    },
+    "sandbox": {
+      "pages": ["sandbox.html", "sandbox.js"]
+    }
+  }
+  

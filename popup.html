@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PostureCorrector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="fixed-header">
+        <h1 class="extension-title">PostureCorrector</h1>
+    </header>
+    <div class="container">
+        <div class="toggle-container">
+            <div class="toggle-item">
+                <div class="toggle-description-wrapper">
+                    <span class="toggle-description">Select the webcam to use:</span>
+                </div>
+                <div class="toggle-switch-wrapper">
+                    <select id="webcamDropdown"></select>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="toggle-item">
+                <div class="toggle-description-wrapper">
+                    <span class="toggle-description">Turn extension ON/OFF</span>
+                </div>
+                <div class="toggle-switch-wrapper">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="powerSwitch">
+                        <span class="slider round">
+                            <span class="toggle-text" id="powerText">OFF</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="radio-container">
+                <h3 class="radio-section-title">Choose warning method:</h3>
+
+                <div class="radio-item">
+                    <input type="radio" id="notification" name="warningMethod" value="notification">
+                    <label for="notification">
+                        <div class="radio-content">
+                            <span class="radio-text-primary">Desktop Notifications</span>
+                            <span class="radio-text-secondary">You will receive desktop notifications 
+                                when your posture is bad. This option consumes less resource than the 
+                                option "Blur Screen".</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="radio-item">
+                    <input type="radio" id="blur" name="warningMethod" value="blur">
+                    <label for="blur">
+                        <div class="radio-content">
+                            <span class="radio-text-primary">Blur Screen</span>
+                            <span class="radio-text-secondary">Your screen will get blurred when your 
+                                posture is bad. Once you correct your posture, your screen will return to 
+                                normal. This option consumes more resource than the option "Send Notifications".</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="radio-container">
+                <h3 class="radio-section-title">Choose your activity:</h3>
+                <div class="radio-item">
+                    <input type="radio" id="work" name="activity" value="work">
+                    <label for="work">
+                        <span class="icon">&#128188;</span>
+                        <span class="radio-text">Work</span>
+                    </label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="study" name="activity" value="study">
+                    <label for="study">
+                        <span class="icon">&#128218;</span>
+                        <span class="radio-text">Study</span>
+                    </label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="entertainment" name="activity" value="entertainment">
+                    <label for="entertainment">
+                        <span class="icon">&#127918;</span>
+                        <span class="radio-text">Entertainment</span>
+                    </label>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="toggle-item">
+                <div class="toggle-description-wrapper">
+                    <span class="toggle-description">Save best posture to start posture detection</span>
+                </div>
+                <div class="toggle-switch-wrapper">
+                    <label class="toggle-switch">
+                        <button id="goodPosture">SAVE</button>
+                    </label>
+                </div>
+            </div>
+            <p id="saveButtonMessage"></p>
+        </div>
+    </div>
+
+
+    <script type="module" src="popup.js"></script>
+</body>
+</html>

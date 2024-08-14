@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Georgia;
+    background: linear-gradient(to top, #fd4646, #f58c8c); /* Red gradient background */
+    color: white; /* White text color */
+}
+
+.title {
+    align-self: flex-start; /* Aligns the title to the top left */
+    margin: 20px;
+    font-size: 55px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between video and data */
+    padding: 20px;
+}
+
+.video-container {
+    flex: 1;
+}
+
+video {
+    width: 100%; /* Ensure the video fills its container */
+    height: auto;
+    display: block;
+    position: relative;
+    backface-visibility: hidden; /* Prevent flickering */
+    transform: translateZ(0); /* Improve rendering stability */
+}
+
+
+.data-container {
+    flex: 1;
+    border-left: 2px solid #ccc; /* Optional: Adds a border between video and data */
+    padding-left: 20px;
+    font-size: 25px;
+}
+
+.data-container .value {
+    display: inline-block;
+    min-width: 80px; /* Adjust this value based on your needs */
+    text-align: right;
+}
+
+.data-container div {
+    margin-bottom: 10px; /* Space between each data item */
+}
