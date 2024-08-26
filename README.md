@@ -1,4 +1,7 @@
 # PostureCorrector
+## Website Link
+- https://posturecorrector.vercel.app/
+
 ### main.py
 - the Python implementation of posture detection using webcam footage. 
 
